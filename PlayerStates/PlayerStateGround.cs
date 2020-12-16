@@ -2,8 +2,13 @@
 
 public class PlayerStateGround : PlayerState
 {
-    public void Enter()
+    GameObject gameObject;
+    Transform transform;
+
+    public void Enter(GameObject _gameObject)
     {
+        gameObject = _gameObject;
+        transform = _gameObject.transform;
         Debug.Log("entering test state");
     }
  

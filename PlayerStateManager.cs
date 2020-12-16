@@ -8,7 +8,7 @@ public class PlayerStateManager : MonoBehaviour
 
     void Start()
     {
-        playerStateMachine.ChangeState(playerStateMachine.states.start);
+        playerStateMachine.ChangeState(playerStateMachine.states.start, gameObject);
     }
 
     void Update()

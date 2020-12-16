@@ -2,14 +2,19 @@
 
 public class PlayerStateStart : PlayerState
 {
-    public void Enter()
+    GameObject gameObject;
+    Transform transform;
+
+    public void Enter(GameObject _gameObject)
     {
-        Debug.Log("entering test state");
+        gameObject = _gameObject;
+        transform = _gameObject.transform;
+        Debug.Log("entering start state");
     }
  
     public void Execute()
     {
-        Debug.Log("updating test state");
+        Debug.Log("updating start state");
     }
  
     public void Exit()

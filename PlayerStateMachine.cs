@@ -1,6 +1,8 @@
-﻿public interface PlayerState
+﻿using UnityEngine;
+
+public interface PlayerState
 {
-    void Enter();
+    void Enter(GameObject _gameObject);
     void Execute();
     void Exit();
 }
@@ -16,13 +18,13 @@ public class PlayerStateMachine
     public States states = new States();
     PlayerState currentState;
 
-    public void ChangeState(PlayerState newState)
+    public void ChangeState(PlayerState _newState, GameObject _gameObject)
     {
         if (currentState != null)
             currentState.Exit();
  
-        currentState = newState;
-        currentState.Enter();
+        currentState = _newState;
+        currentState.Enter(_gameObject);
     }
  
     public void Update()
