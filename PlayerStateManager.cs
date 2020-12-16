@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
 {
-    PlayerStateMachine playerStateMachine = new PlayerStateMachine();
+    public PlayerStateMachine playerStateMachine = new PlayerStateMachine();
 
     void Start()
     {
-        playerStateMachine.ChangeState(playerStateMachine.states.start, gameObject);
+        playerStateMachine.ChangeState(playerStateMachine.states.start, playerStateMachine, gameObject);
     }
 
     void Update()

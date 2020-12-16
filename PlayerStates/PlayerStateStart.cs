@@ -1,14 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerStateStart : PlayerState
 {
+    PlayerStateMachine playerStateMachine;
     GameObject gameObject;
     Transform transform;
 
-    public void Enter(GameObject _gameObject)
+    public void Enter(params object[] _args)
     {
-        gameObject = _gameObject;
-        transform = _gameObject.transform;
+        playerStateMachine = (PlayerStateMachine) _args[0];
+        gameObject = (GameObject) _args[1];
+        transform = gameObject.transform;
+
         Debug.Log("entering start state");
     }
  

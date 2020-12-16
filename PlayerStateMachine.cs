@@ -2,7 +2,7 @@
 
 public interface PlayerState
 {
-    void Enter(GameObject _gameObject);
+    void Enter(params object[] _args);
     void Execute();
     void Exit();
 }
@@ -18,13 +18,13 @@ public class PlayerStateMachine
     public States states = new States();
     PlayerState currentState;
 
-    public void ChangeState(PlayerState _newState, GameObject _gameObject)
+    public void ChangeState(PlayerState _newState, params object[] _args)
     {
         if (currentState != null)
             currentState.Exit();
  
         currentState = _newState;
-        currentState.Enter(_gameObject);
+        currentState.Enter(_args);
     }
  
     public void Update()

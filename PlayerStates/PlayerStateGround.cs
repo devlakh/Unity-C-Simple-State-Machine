@@ -1,24 +1,29 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerStateGround : PlayerState
 {
+    PlayerStateMachine playerStateMachine;
     GameObject gameObject;
     Transform transform;
 
-    public void Enter(GameObject _gameObject)
+    public void Enter(params object[] _args)
     {
-        gameObject = _gameObject;
-        transform = _gameObject.transform;
-        Debug.Log("entering test state");
+        playerStateMachine = (PlayerStateMachine) _args[0];
+        gameObject = (GameObject) _args[1];
+        transform = gameObject.transform;        
+
+        Debug.Log("entering ground state");
     }
- 
+
     public void Execute()
     {
-        Debug.Log("updating test state");
+        Debug.Log("updating ground state");
     }
  
     public void Exit()
     {
-        Debug.Log("exiting test state");
+        Debug.Log("exiting ground state");
     }
 }
