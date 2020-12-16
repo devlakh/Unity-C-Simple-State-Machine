@@ -1,0 +1,1 @@
+Attach PlayerAttributes.cs and PlayerStateManager.cs to GameObject
