@@ -1,5 +1,8 @@
-Attach To GameObject(Player Game Object)(Player Empty) :
+Attach To GameObject :
+
 	PlayerAttributes.cs
+
 	PlayerGameObjects.cs
+
 	PlayerStateManager.cs
 	
