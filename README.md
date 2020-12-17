@@ -6,3 +6,14 @@ Attach To GameObject :
 
 	PlayerStateManager.cs
 	
+
+PlayerStateManager, Gathers some of the essential shit and sends them to the first PlayerStateMachine.ChangeState()
+
+
+Changing Stuff in 
+	
+	PlayerAttributes.cs
+	
+	PlayerGameObjects.cs
+	
+on the inspector DURING RUNTIME wont effect the PlayerState
