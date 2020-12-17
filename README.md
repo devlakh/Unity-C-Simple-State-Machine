@@ -1,4 +1,5 @@
-Attach PlayerAttributes.cs and PlayerStateManager.cs to GameObject
-
-gameObject is passed From PlayerStateManager to PlayerStateMachine and to All States
+Attach To GameObject(Player Game Object)(Player Empty) :
+	PlayerAttributes.cs
+	PlayerGameObjects.cs
+	PlayerStateManager.cs
 	
